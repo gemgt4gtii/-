@@ -8,7 +8,7 @@
 
 　
 
-| 1. 在 ipchains 中，諸如 input 鏈，是使用小寫的 chains 名，在 iptables 中，要改用大寫 INPUT。<br>2. 在 iptables 中，要指定規則是欲作用在那一個規則表上(使用 -t 來指定，如 -t nat)，若不指定，則預設是作用在 filter 這個表。<br>3. 在 ipchains 中， -i 是指介面(interface)，但在 iptables 中，-i 則是指進入的方向，且多了 -o，代表出去的方向。<br>4. 在 iptables 中，來源 port 要使用關鍵字 --sport 或 --source-port<br>5. 在 iptables 中，目的 port 要使用關鍵字 --dport 或 --destination-port<br>6. 在 iptables 中，"丟棄" 的處置動作，不再使用 DENY 這個 target，改用 DROP。<br>7. 在 ipchains 的記錄檔功能 -l，已改為目標 -j LOG，並可指定記錄檔的標題。<br>8. 在 ipchains 中的旗標 -y，在 iptables 中可用 --syn 或 --tcp-flag SYN,ACK,FIN SYN<br>9. 在 iptables 中，imcp messages 型態，要加上關鍵字 --icmp-type，如：<br>   iptables -A OUTPUT -o eth0 -p icmp -s $FW_IP --icmp-type 8 -d any/0 -j ACCEPT |
+1. 在 ipchains 中，諸如 input 鏈，是使用小寫的 chains 名，在 iptables 中，要改用大寫 INPUT。<br>2. 在 iptables 中，要指定規則是欲作用在那一個規則表上(使用 -t 來指定，如 -t nat)，若不指定，則預設是作用在 filter 這個表。<br>3. 在 ipchains 中， -i 是指介面(interface)，但在 iptables 中，-i 則是指進入的方向，且多了 -o，代表出去的方向。<br>4. 在 iptables 中，來源 port 要使用關鍵字 --sport 或 --source-port<br>5. 在 iptables 中，目的 port 要使用關鍵字 --dport 或 --destination-port<br>6. 在 iptables 中，"丟棄" 的處置動作，不再使用 DENY 這個 target，改用 DROP。<br>7. 在 ipchains 的記錄檔功能 -l，已改為目標 -j LOG，並可指定記錄檔的標題。<br>8. 在 ipchains 中的旗標 -y，在 iptables 中可用 --syn 或 --tcp-flag SYN,ACK,FIN SYN<br>9. 在 iptables 中，imcp messages 型態，要加上關鍵字 --icmp-type，如：<br>   iptables -A OUTPUT -o eth0 -p icmp -s $FW_IP --icmp-type 8 -d any/0 -j ACCEPT |
 
 　
 
