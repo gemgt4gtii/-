@@ -96,10 +96,8 @@ app 使用的 port 為 2368，要讓當連到 `www.example.com` 時，交由這�
 
 這樣子 nginx 會使用預設的 round-robin 原則來作 load balance，另外還有兩種 `least-connected` 及 `ip-hash` 原則可用，詳情請見[官方文件](http://nginx.org/en/docs/http/load_balancing.html)的說明。
 
-## **小結**
 
 照上述的方式，打開瀏覽器連到 www.example.com，就能夠連到 port 2368 的 app 了。另外還有一些進階的 directive，包括 `expires`、`gzip`、`proxy_cache` 等等，在之後介紹。
 
 
-# [**設定 Let's Encrypt HTTPS nginx certbot 自動更新 教學**](https://blog.hellojcc.tw/2018/05/02/setup-https-with-letsencrypt-on-nginx/)
 
